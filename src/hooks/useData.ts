@@ -1,8 +1,87 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Student, FeeRecord, HostelRoom, ExamRecord } from '../types';
 
-// Empty arrays for fresh start
-const mockStudents: Student[] = [];
+// Sample students for demonstration
+const mockStudents: Student[] = [
+  {
+    id: '1',
+    studentId: 'STU001',
+    name: 'Tanay Mahajan',
+    email: 'tanay.mahajan@university.edu',
+    phone: '+91 98765 43210',
+    dateOfBirth: '2002-05-15',
+    address: 'Mumbai, Maharashtra',
+    course: 'Computer Science',
+    year: '3rd Year',
+    status: 'active',
+    admissionDate: '2023-08-15'
+  },
+  {
+    id: '2',
+    studentId: 'STU002',
+    name: 'Aditya Jagdale',
+    email: 'Aditya.jagdale@university.edu',
+    phone: '+91 98765 43211',
+    dateOfBirth: '2003-08-22',
+    address: 'Delhi, NCR',
+    course: 'Physics',
+    year: '2nd Year',
+    status: 'active',
+    admissionDate: '2023-08-15'
+  },
+  {
+    id: '3',
+    studentId: 'STU003',
+    name: 'Siddharth Farkade',
+    email: 'Sidharth.farkade@university.edu',
+    phone: '+91 98765 43212',
+    dateOfBirth: '2001-12-10',
+    address: 'Pune, Maharashtra',
+    course: 'Chemistry',
+    year: '4th Year',
+    status: 'active',
+    admissionDate: '2021-08-15'
+  },
+  {
+    id: '4',
+    studentId: 'STU004',
+    name: 'Advait Kandelgaokar',
+    email: 'Advait.kandelgaokar@university.edu',
+    phone: '+91 98765 43213',
+    dateOfBirth: '2004-03-18',
+    address: 'Bangalore, Karnataka',
+    course: 'Biology',
+    year: '1st Year',
+    status: 'active',
+    admissionDate: '2024-08-15'
+  },
+    {
+      id: '5',
+      studentId: 'STU005',
+    name: 'Pratik Kawade',
+    email: 'Pratik.kawade@university.edu',
+    phone: '+91 98765 43214',
+    dateOfBirth: '2003-07-25',
+    address: 'Nagpur, Maharashtra',
+    course: 'Computer Science',
+    year: '2nd Year',
+    status: 'active',
+    admissionDate: '2023-08-15'
+    },
+    {
+      id: '6',
+      studentId: 'STU006',
+    name: 'Niyati Lokare',
+    email: 'Niyati.lokare@university.edu',
+    phone: '+91 98765 43215',
+    dateOfBirth: '2004-11-08',
+    address: 'Hyderabad, Telangana',
+    course: 'Computer Science',
+    year: '1st Year',
+    status: 'active',
+    admissionDate: '2024-08-15'
+    }
+];
 
 const mockFeeRecords: FeeRecord[] = [];
 
@@ -54,7 +133,104 @@ const mockHostelRooms: HostelRoom[] = [
   }
 ];
 
-const mockExamRecords: ExamRecord[] = [];
+const mockExamRecords: ExamRecord[] = [
+  {
+    id: '1',
+    studentId: '1',
+    studentName: 'Tanay Mahajan',
+    subject: 'Mathematics',
+    examType: 'midterm',
+    marks: 85,
+    totalMarks: 100,
+    grade: 'A',
+    examDate: '2024-01-15',
+    semester: 'Fall 2024'
+  },
+  {
+    id: '2',
+    studentId: '2',
+    studentName: 'Aditya Jagdale',
+    subject: 'Physics',
+    examType: 'final',
+    marks: 92,
+    totalMarks: 100,
+    grade: 'A+',
+    examDate: '2024-01-20',
+    semester: 'Fall 2024'
+  },
+  {
+    id: '3',
+    studentId: '3',
+    studentName: 'Siddharth Farkade',
+    subject: 'Chemistry',
+    examType: 'midterm',
+    marks: 78,
+    totalMarks: 100,
+    grade: 'B+',
+    examDate: '2024-01-18',
+    semester: 'Fall 2024'
+  },
+  {
+    id: '4',
+    studentId: '4',
+    studentName: 'Advait Kandelgaokar',
+    subject: 'Biology',
+    examType: 'quiz',
+    marks: 65,
+    totalMarks: 100,
+    grade: 'B',
+    examDate: '2024-01-22',
+    semester: 'Fall 2024'
+  },
+  {
+    id: '5',
+    studentId: '5',
+    studentName: 'Pratik Kawade',
+    subject: 'Computer Science',
+    examType: 'assignment',
+    marks: 45,
+    totalMarks: 100,
+    grade: 'C',
+    examDate: '2024-01-25',
+    semester: 'Fall 2024'
+  },
+  {
+    id: '6',
+    studentId: '1',
+    studentName: 'Niyati Lokare',
+    subject: 'English',
+    examType: 'final',
+    marks: 88,
+    totalMarks: 100,
+    grade: 'A',
+    examDate: '2024-01-28',
+    semester: 'Fall 2024'
+  },
+  {
+    id: '7',
+    studentId: '2',
+    studentName: 'Aditya Jagdale',
+    subject: 'History',
+    examType: 'midterm',
+    marks: 95,
+    totalMarks: 100,
+    grade: 'A+',
+    examDate: '2024-01-30',
+    semester: 'Fall 2024'
+  },
+  {
+    id: '8',
+    studentId: '3',
+    studentName: 'Siddharth Farkade',
+    subject: 'German',
+    examType: 'quiz',
+    marks: 35,
+    totalMarks: 100,
+    grade: 'F',
+    examDate: '2024-02-01',
+    semester: 'Fall 2024'
+  }
+];
 
 export const useData = () => {
   const [students, setStudents] = useState<Student[]>(mockStudents);
