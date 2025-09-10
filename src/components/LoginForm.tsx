@@ -82,11 +82,13 @@ const LoginForm: React.FC = () => {
         </form>
 
         <div className="mt-6 p-4 bg-gray-50 rounded-md">
-          <p className="text-sm text-gray-600 mb-2">Demo Accounts:</p>
+          <p className="text-sm text-gray-600 mb-2">Demo Accounts (Password: password):</p>
           <div className="text-xs space-y-1">
-            <div><strong>Admin:</strong> admin@college.edu / password</div>
-            <div><strong>Staff:</strong> staff@college.edu / password</div>
-            <div><strong>Student:</strong> student@college.edu / password</div>
+            <div><strong>Admin:</strong> admin@college.edu - Can add students, fees, allocate hostel</div>
+            <div><strong>Staff:</strong> staff@college.edu - Can add marks, see student list</div>
+            <div><strong>Student:</strong> tanay.mahajan@university.edu - Can see their fees and grades</div>
+            <div><strong>Student:</strong> aditya.jagdale@university.edu - Can see their fees and grades</div>
+            <div><strong>Student:</strong> siddharth.farkade@university.edu - Can see their fees and grades</div>
           </div>
         </div>
       </div>

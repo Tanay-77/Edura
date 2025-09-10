@@ -20,7 +20,7 @@ const mockStudents: Student[] = [
     id: '2',
     studentId: 'STU002',
     name: 'Aditya Jagdale',
-    email: 'Aditya.jagdale@university.edu',
+    email: 'aditya.jagdale@university.edu',
     phone: '+91 98765 43211',
     dateOfBirth: '2003-08-22',
     address: 'Delhi, NCR',
@@ -33,7 +33,7 @@ const mockStudents: Student[] = [
     id: '3',
     studentId: 'STU003',
     name: 'Siddharth Farkade',
-    email: 'Sidharth.farkade@university.edu',
+    email: 'siddharth.farkade@university.edu',
     phone: '+91 98765 43212',
     dateOfBirth: '2001-12-10',
     address: 'Pune, Maharashtra',
@@ -83,7 +83,68 @@ const mockStudents: Student[] = [
     }
 ];
 
-const mockFeeRecords: FeeRecord[] = [];
+const mockFeeRecords: FeeRecord[] = [
+  {
+    id: '1',
+    studentId: '1',
+    studentName: 'Tanay Mahajan',
+    amount: 25000,
+    dueDate: '2024-02-15',
+    status: 'pending',
+    type: 'tuition'
+  },
+  {
+    id: '2',
+    studentId: '1',
+    studentName: 'Tanay Mahajan',
+    amount: 5000,
+    dueDate: '2024-01-30',
+    status: 'paid',
+    type: 'library',
+    paidDate: '2024-01-25',
+    receiptNumber: 'REC001'
+  },
+  {
+    id: '3',
+    studentId: '2',
+    studentName: 'Aditya Jagdale',
+    amount: 22000,
+    dueDate: '2024-02-15',
+    status: 'pending',
+    type: 'tuition'
+  },
+  {
+    id: '4',
+    studentId: '2',
+    studentName: 'Aditya Jagdale',
+    amount: 3000,
+    dueDate: '2024-01-20',
+    status: 'paid',
+    type: 'examination',
+    paidDate: '2024-01-18',
+    receiptNumber: 'REC002'
+  },
+  {
+    id: '5',
+    studentId: '3',
+    studentName: 'Siddharth Farkade',
+    amount: 24000,
+    dueDate: '2024-02-15',
+    status: 'pending',
+    type: 'tuition'
+  },
+  {
+    id: '6',
+    studentId: '3',
+    studentName: 'Siddharth Farkade',
+    amount: 4000,
+    dueDate: '2024-01-25',
+    status: 'paid',
+    type: 'hostel',
+    paidDate: '2024-01-22',
+    receiptNumber: 'REC003'
+  }
+];
 
 const mockHostelRooms: HostelRoom[] = [
   {

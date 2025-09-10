@@ -26,13 +26,28 @@ const Navigation: React.FC<NavigationProps> = ({
 }) => {
   const { user, logout, hasPermission } = useAuth();
 
-  const modules = [
-    { id: 'dashboard', name: 'Dashboard', icon: BarChart3, permission: 'dashboard' },
-    { id: 'admissions', name: 'Admissions', icon: Users, permission: 'admissions' },
-    { id: 'fees', name: 'Fee Management', icon: IndianRupee, permission: 'fees' },
-    { id: 'hostel', name: 'Hostel Management', icon: Building, permission: 'hostel' },
-    { id: 'exams', name: 'Examination Records', icon: FileText, permission: 'exams' }
-  ];
+  const getModules = () => {
+    if (user?.role === 'admin') {
+      return [
+        { id: 'dashboard', name: 'Dashboard', icon: BarChart3, permission: 'dashboard' },
+        { id: 'admissions', name: 'Admissions', icon: Users, permission: 'admissions' },
+        { id: 'fees', name: 'Fee Management', icon: IndianRupee, permission: 'fees' },
+        { id: 'hostel', name: 'Hostel Management', icon: Building, permission: 'hostel' }
+      ];
+    } else if (user?.role === 'staff') {
+      return [
+        { id: 'dashboard', name: 'Staff Dashboard', icon: BarChart3, permission: 'students_list' },
+        { id: 'exams', name: 'Add Exam Records', icon: FileText, permission: 'exams' }
+      ];
+    } else if (user?.role === 'student') {
+      return [
+        { id: 'dashboard', name: 'My Dashboard', icon: BarChart3, permission: 'my_fees' }
+      ];
+    }
+    return [];
+  };
+
+  const modules = getModules();
 
   const availableModules = modules.filter(module => hasPermission(module.permission));
 

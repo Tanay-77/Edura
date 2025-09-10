@@ -4,6 +4,8 @@ import LandingPage from './components/LandingPage';
 import LoginForm from './components/LoginForm';
 import Navigation from './components/Navigation';
 import Dashboard from './components/Dashboard';
+import StudentDashboard from './components/StudentDashboard';
+import StaffDashboard from './components/StaffDashboard';
 import AdmissionsModule from './components/AdmissionsModule';
 import FeeManagementModule from './components/FeeManagementModule';
 import HostelManagementModule from './components/HostelManagementModule';
@@ -16,6 +18,18 @@ function App() {
   const [showLanding, setShowLanding] = useState(true);
 
   const renderModule = () => {
+    // Role-based dashboard selection
+    if (currentModule === 'dashboard') {
+      if (authProps.user?.role === 'student') {
+        return <StudentDashboard />;
+      } else if (authProps.user?.role === 'staff') {
+        return <StaffDashboard />;
+      } else {
+        return <Dashboard />; // Admin dashboard
+      }
+    }
+
+    // Other modules
     switch (currentModule) {
       case 'admissions':
         return <AdmissionsModule />;
