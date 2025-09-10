@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DollarSign, Receipt, Plus, Download } from 'lucide-react';
+import { IndianRupee, Receipt, Plus, Download } from 'lucide-react';
 import { useData } from '../hooks/useData';
 
 const FeeManagementModule: React.FC = () => {
@@ -72,7 +72,7 @@ const FeeManagementModule: React.FC = () => {
         <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
           <div className="flex items-center">
             <div className="bg-green-100 p-3 rounded-lg">
-              <DollarSign className="w-6 h-6 text-green-600" />
+              <IndianRupee className="w-6 h-6 text-green-600" />
             </div>
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600">Total Collected</p>
@@ -84,7 +84,7 @@ const FeeManagementModule: React.FC = () => {
         <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
           <div className="flex items-center">
             <div className="bg-yellow-100 p-3 rounded-lg">
-              <DollarSign className="w-6 h-6 text-yellow-600" />
+              <IndianRupee className="w-6 h-6 text-yellow-600" />
             </div>
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600">Pending Fees</p>
@@ -96,7 +96,7 @@ const FeeManagementModule: React.FC = () => {
         <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
           <div className="flex items-center">
             <div className="bg-blue-100 p-3 rounded-lg">
-              <Receipt className="w-6 h-6 text-blue-600" />
+              <IndianRupee className="w-6 h-6 text-blue-600" />
             </div>
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600">Total Records</p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, DollarSign, Building, FileText, TrendingUp, AlertTriangle } from 'lucide-react';
+import { Users, IndianRupee, Building, FileText, TrendingUp, AlertTriangle } from 'lucide-react';
 import { useData } from '../hooks/useData';
 
 const Dashboard: React.FC = () => {
@@ -60,7 +60,7 @@ const Dashboard: React.FC = () => {
         <StatCard
           title="Total Fees Collected"
           value={`₹${stats.paidFees.toLocaleString()}`}
-          icon={DollarSign}
+          icon={IndianRupee}
           color="text-green-600"
           bgColor="bg-green-100"
         />

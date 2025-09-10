@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Users, 
-  DollarSign, 
+  IndianRupee, 
   Building, 
   FileText, 
   BarChart3, 
@@ -29,7 +29,7 @@ const Navigation: React.FC<NavigationProps> = ({
   const modules = [
     { id: 'dashboard', name: 'Dashboard', icon: BarChart3, permission: 'dashboard' },
     { id: 'admissions', name: 'Admissions', icon: Users, permission: 'admissions' },
-    { id: 'fees', name: 'Fee Management', icon: DollarSign, permission: 'fees' },
+    { id: 'fees', name: 'Fee Management', icon: IndianRupee, permission: 'fees' },
     { id: 'hostel', name: 'Hostel Management', icon: Building, permission: 'hostel' },
     { id: 'exams', name: 'Examination Records', icon: FileText, permission: 'exams' }
   ];

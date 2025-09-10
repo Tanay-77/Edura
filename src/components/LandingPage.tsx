@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Users, 
-  DollarSign, 
+  IndianRupee, 
   Building, 
   FileText, 
   BarChart3, 
@@ -30,7 +30,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
       bgColor: 'bg-blue-100'
     },
     {
-      icon: DollarSign,
+      icon: IndianRupee,
       title: 'Fee Management',
       description: 'Complete fee tracking, payment processing, and automatic receipt generation with real-time analytics.',
       color: 'text-green-600',
